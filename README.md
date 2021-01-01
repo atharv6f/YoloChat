@@ -79,12 +79,15 @@ $ npm start
 
 ## Tiny features
 
-* You provide a username to enter a chat room. Server endpoint is configurable.
-* Supports Markdown.
-* List of connected users.
-* Informs connection and disconnection events.
-* Informs when someone is typing.
-* Supports multiple instances
+- [x] Registered user can create multiple channels
+- [x] Registered user can subscribe to multiple channels
+- [x] Informs connection and disconnection events.
+- [x] Supports multiple instances
+- [x] Dark and Light themes available
+- [x] User can enable/disable notifications and sounds
+- [x] Displays active and inactive users/chats
+- [ ] Auto Updates
+- [ ] User Profile
 
 
 
