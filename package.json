@@ -1,0 +1,99 @@
+{
+	"name": "yolochatt",
+	"version": "1.0.0",
+	"description": "olo Chat built using electron.js",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron .",
+		"watch": "webpack --config webpack.common.js --watch",
+		"build": "webpack --config webpack.prod.js",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder",
+		"make:linux": "electron-builder --linux",
+		"make:macos": "electron-builder --mac",
+		"make:win": "electron-builder --win --x64"
+	},
+	"author": "Atharv Yeolekar",
+	"license": "ISC",
+	"build": {
+		"productName": "Yolo Chat",
+		"appId": "com.yolo.yolochat",
+		"files": [
+			"build/**/*",
+			"assets/**/*",
+			"utils/**/*",
+			"index.html",
+			"splash.html",
+			"splash.css",
+			"main.js",
+			"preload.js"
+		],
+		"mac": {
+			"category": "public.app-category.developer-tools",
+			"icon": "assets/images/react_app_logo.png",
+			"hardenedRuntime": true,
+			"gatekeeperAssess": false
+		},
+		"dmg": {
+			"contents": [
+				{
+					"x": 130,
+					"y": 220
+				},
+				{
+					"x": 430,
+					"y": 220,
+					"type": "link",
+					"path": "/Applications"
+				}
+			]
+		},
+		"win": {
+			"icon": "assets/images/react_app_logo.png",
+			"target": [
+				"nsis"
+			]
+		},
+		"linux": {
+			"target": [
+				"deb",
+				"rpm",
+				"AppImage"
+			],
+			"category": "Development"
+		}
+	},
+	"devDependencies": {
+		"dotenv-webpack": "^2.0.0",
+		"electron": "^11.1.1",
+		"electron-builder": "^22.9.1",
+		"sass": "^1.32.0",
+		"sass-loader": "^10.1.0",
+		"webpack": "^5.11.1"
+	},
+	"dependencies": {
+		"@babel/core": "^7.12.9",
+		"@babel/preset-env": "^7.12.7",
+		"@babel/preset-react": "^7.12.7",
+		"@reduxjs/toolkit": "^1.5.0",
+		"babel-loader": "^8.2.1",
+		"bootstrap": "^4.5.2",
+		"css-loader": "^5.0.1",
+		"dotenv": "^8.2.0",
+		"electron-reload": "^1.5.0",
+		"firebase": "^8.2.1",
+		"moment": "^2.29.1",
+		"nodemon": "^2.0.6",
+		"process": "^0.11.10",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-hook-form": "^6.14.0",
+		"react-redux": "^7.2.2",
+		"react-router-dom": "^5.2.0",
+		"redux": "^4.0.5",
+		"redux-thunk": "^2.3.0",
+		"style-loader": "^2.0.0",
+		"webpack-cli": "^4.2.0",
+		"webpack-merge": "^5.7.3"
+	}
+}
