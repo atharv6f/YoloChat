@@ -16,11 +16,7 @@
 2. Open or unzip the file
 3. Done!
 
-### OS-X
-coming soon :stuck_out_tongue_closed_eyes:
 
-### Linux
-coming soon :stuck_out_tongue_closed_eyes:
 
 ### For developers
 Clone the source locally:
